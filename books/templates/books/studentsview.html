@@ -1,0 +1,51 @@
+{% extends 'library/layout.html' %}
+{% block content %}
+<div class="container mt-2 mb-2">
+  <div class="row justify-content-center container" style="margin-left:3px;">
+    {%if books%}
+    <table class="table table-hover">
+      <thead class="grey lighten-2">
+        <tr>
+          <th scope="col">S.N</th>
+          <th scope="col">Book name</th>
+          <th scope="col">Author</th>
+          <th scope="col">Entry date</th>
+          <th scope="col">Expiry date</th>
+          <th scope="col">Fine</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for book in books %}
+        <tr>
+          <td class="count"></td>
+          <td>{{book.issue_book.title}}</td>
+          <td>{{book.issue_book.author}}</td>
+          <td>{{book.entry_date}}</td>
+          <td class="date">{{book.expiry_date}}</td>
+          <td>Rs&nbsp{{book.get_fine}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {%else%}
+    <div class="alert alert-dark mt-2 col-5 mr-auto ml-auto" role="alert">
+      No any books issued
+    </div>
+    {%endif%}
+  </div>
+</div>
+<script>
+  let counter = 1;
+  document.querySelectorAll('.count').forEach(function(item) {
+    item.innerHTML = counter;
+    getcount();
+  })
+
+  function getcount() {
+    return ++counter;
+  }
+  document.querySelectorAll('.fine').forEach(function(item) {
+    item.innerHTML = "fine";
+  })
+</script>
+{% endblock %}

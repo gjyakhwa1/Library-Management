@@ -1,0 +1,57 @@
+{% extends 'library/layout.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-3">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <div class="row justify-content-center" id="index-title">
+        <span style="color:cornflowerblue">Library</span>&nbsp<span style="color:crimson"> Management</span>&nbsp<span style="color:navy">System</span>
+      </div>
+      <p class="index-sub-heading mt-1">What is Library ?</p>
+      <div class="row mt-2 index-container">
+        <div class="col-lg-7 col-md-6 col-sm-11">
+          <p> A library is organized for use and maintained by a public body, an institution, a corporation, or a
+            private individual. Public and institutional collections and services may be intended for use by people
+            who choose not to—or cannot afford to—purchase an extensive collection themselves, who need material no individual
+            can reasonably be expected to have, or who require professional assistance with their research. In addition to providing
+            materials, libraries also provide the services of librarians who are experts at finding and organizing information and at interpreting information needs. Libraries often provide quiet areas for studying, and they also often offer common
+            areas to facilitate group study and collaboration. Libraries often provide public facilities for access to their
+            electronic resources and the Internet.</p>
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-11">
+          <img src="{% static 'image/library.jpg' %}" alt="library" style="width:100%;" />
+        </div>
+      </div>
+      <div class="row mt-2 mb-3 index-container">
+        <div class="col-lg-5 col-md-5 col-sm-11">
+          <img src="{% static 'image/library-1.jpg' %}" alt="library" style="width:100%;" />
+        </div>
+        <div class="col-lg-7 col-md-6 col-sm-11">
+          <p> The first libraries consisted of archives of the earliest form of writing—the clay tablets in cuneiform script
+            discovered in Sumer, some dating back to 2600 BC. Private or personal libraries made up of written books
+            appeared in classical Greece in the 5th century BC. Modern libraries are increasingly being redefined as places
+            to get unrestricted access to information in many formats and from many sources. They are extending services beyond the physical walls of a building, by
+            providing material accessible by electronic means, and by providing the assistance of librarians in navigating
+            and analyzing very large amounts of information with a variety of digital resources. Libraries are increasingly
+            becoming community hubs where programs are delivered and people engage in lifelong learning.n the 6th century,
+            at the very close of the Classical period, the great libraries of the Mediterranean world remained those of
+            Constantinople and Alexandria. The libraries of Timbuktu were also established around this time and attracted
+            scholars from all over the world.</p>
+        </div>
+      </div>
+      <p class="index-sub-heading mt-1">Why Library Management ?</p>
+      <div class="row mt-2 index-container mb-3">
+        <div class="col-lg-11 col-md-11 col-sm-11">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">A library management system is the most proficient and easy to use system for managing all the processes involved in a Library in the most effective ways.</li>
+            <li class="list-group-item">This system will reduce all the manual work and the whole process can be managed just through single clicks and edits.</li>
+            <li class="list-group-item">There will be no headache and doubtfulness of storing the data securely and searching the records of any individual afterward.</li>
+            <li class="list-group-item">Any book seeker can rent a book just by signing in with their details, and return it with the date of returning.</li>
+            <li class="list-group-item">The staff can also facilitate themselves with some extra authorizations and privileges.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

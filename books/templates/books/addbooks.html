@@ -1,0 +1,26 @@
+{% extends 'library/layout.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center  form-container mr-auto ">
+    <p class="form-title">Add a Book</p>
+  </div>
+  <hr />
+  <div class="row justify-content-center">
+    <form method="post" action="{% url 'addbooks' %}">
+      {% csrf_token %}
+      <div class=" form-container">
+        {{books_form.isbn|as_crispy_field}}
+        {{books_form.title|as_crispy_field}}
+        {{books_form.author|as_crispy_field}}
+        {{books_form.quantity|as_crispy_field}}
+        <hr />
+        <div class="row justify-content-center">
+          <button class="btn btn-danger" type="submit">Add</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'books/searchbooks.html' %}
+{% block display %}
+{%if message %}
+<div class="alert alert-dark mt-2 col-5 mr-auto ml-auto" role="alert">
+  {{message}}
+</div>
+{% else %}
+<table class="table mt-3 table-hover">
+    <thead class="grey lighten-2">
+        <tr>
+            <th scope="col">ISBN</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Quantity Left</th>
+        </tr>
+    </thead>
+    <tbody>
+            {%for item in books %}
+        <tr>
+            <td>{{item.isbn}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.author}}</td>
+            <td>{{item.quantity}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{%endif%}
+{% endblock %}

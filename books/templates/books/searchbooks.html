@@ -1,0 +1,21 @@
+{% extends 'library/layout.html' %}
+{% block content %}
+<div class="container mt-3">
+    <div class="row ml-2 mr-2" style="justify-content:center;">
+        <form class="form-inline" method="post">
+          {% csrf_token %}
+            <input class="form-control mr-sm-2" name="book" type="search" placeholder="Search Books" aria-label="Search" list="books" size="70"style="margin-left:5px;margin-right:5px;">
+            <datalist id="books">
+              {% for book in books %}
+              <option value="{{book.title}}">
+              {% endfor %}
+            </datalist>
+            <button class="btn btn-outline-success my-2 my-sm-0 " type="submit" style="margin-left:5px;">Search</button>
+        </form>
+    </div>
+</div>
+<div class="container">
+    {% block display %}
+    {% endblock %}
+</div>
+{% endblock %}
