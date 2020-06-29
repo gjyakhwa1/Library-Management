@@ -1,4 +1,4 @@
-# Final Project-Library Management System
+# Library Management System
 
 Web Programming with Python and JavaScript
 
