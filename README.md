@@ -32,7 +32,7 @@ Python file to filter as per user description
 ##### forms.py
 forms for adding and issuing books
 
-###library app
+### library app
 app that contains pages and views inherited by other app pages
 
 ##### templates folder in library app
