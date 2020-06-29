@@ -1,7 +1,5 @@
 # Library Management System
 
-Web Programming with Python and JavaScript
-
 ### accounts app
 It handles all the account related activities like new account, login, logout
 
