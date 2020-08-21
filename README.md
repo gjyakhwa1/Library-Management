@@ -44,6 +44,4 @@ app that contains pages and views inherited by other app pages
 ### static folder
 It handles all the CSS as well as images of website
 
-### Javascript is used in the html files where JS is needed
 
-### inventory app is main app
